@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Figma Design</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-section {
+        display: flex;
+        width: 600px;
+        height:auto;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    #left-side {
+        width: 250px;
+    }
+
+    #right-side{
+        width: 350px;
+        padding: 20px;
+        background-color: #e0e0e0;
+    }
+    #picture-container, #education-container, #skills-container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin: 10px;
+        padding: 20px;
+        width: 300px;
+        height: auto;
+        text-align: center;
+    
+    }
+    .btn {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+    <h1>My Resume Portfolio</h1>
+    <section class="main-section">
+        
+        <section id="right-side">
+            <h1>My name is Asad Ali</h1>
+            <h3>I am a Passoniate Web & Agentic AI Developer</h3>
+            <p>I am a web developer with a passion for creating beautiful and functional websites. I have a strong background in HTML, CSS, and JavaScript, and I am always eager to learn new technologies and improve my skills.</p>
+            <p>In addition to my technical skills, I am also a creative problem solver and a team player. I enjoy collaborating with others to bring ideas to life and create innovative solutions.</p>
+            
+        </section>
+
+        <section class="left-side">
+            
+        <div id="picture-container">
+            <Button class="btn" onclick="showpic()">Click Picture</Button>
+            <div id="picture">
+                <!-- Picture will be displayed here -->
+            </div>
+        </div>
+
+        <div id="education-container">
+            <Button class="btn">See Education</Button>
+        </div>
+
+        <div id="skills-container">
+             <Button class="btn">See Skills</Button>
+        </div>
+
+
+    </section>
+    
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
