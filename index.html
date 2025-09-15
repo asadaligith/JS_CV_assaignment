@@ -35,7 +35,7 @@
         padding: 20px;
         background-color: #e0e0e0;
     }
-    #picture-container, #education-container, #skills-container {
+    #picture-container, #education-container, #contact-container {
         background-color: white;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -55,11 +55,13 @@
         cursor: pointer;
         font-size: 16px;
         margin-bottom: 10px;
+        margin-top:5px
     }
 
     .btn:hover {
         background-color: #0056b3;
     }
+  
 </style>
 <body>
     <h1>My Resume Portfolio</h1>
@@ -86,8 +88,19 @@
             <Button class="btn">See Education</Button>
         </div>
 
-        <div id="skills-container">
-             <Button class="btn">See Skills</Button>
+        <div id="contact-container">
+            <h4>Contact Me</h4>
+        <div id="form-div"  >
+            <!-- contact info will be displayed here -->
+             <form onsubmit="formsubmit(event)">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <Button class="btn"type="submit" >Submit</Button>
+                    </form>
+
+        </div>
         </div>
 
 
