@@ -61,6 +61,12 @@
     .btn:hover {
         background-color: #0056b3;
     }
+
+    #education > ul >li{
+        text-align: left;
+        margin: 5px 0;
+        font-size: 16px;
+    }
   
 </style>
 <body>
@@ -78,20 +84,35 @@
         <section class="left-side">
             
         <div id="picture-container">
-            <Button class="btn" onclick="showpic()">Click Picture</Button>
-            <div id="picture">
+            <Button class="btn" id="pic-btn" onclick="showpic('picture')">Show Picture</Button>
+            <div id="picture" style="display: none;">
                 <!-- Picture will be displayed here -->
+                 <img src="images/profile-pic.jpeg" alt="profile-pic" id="pic" height="300" width="300" >
             </div>
         </div>
 
         <div id="education-container">
-            <Button class="btn">See Education</Button>
+            <Button class="btn" id="edu-btn"onclick="education('education')">See Education</Button>
+            <div id="education" style="display: none;">
+                <ul>
+                    <li>
+                        Matriculation (2012)
+                    </li>
+                    <li> 
+                        Intermediate (2023-2024)
+                    </li>
+                    <li>
+                        Graduation (On going)
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
 
         <div id="contact-container">
             <h4>Contact Me</h4>
         <div id="form-div"  >
-            <!-- contact info will be displayed here -->
              <form onsubmit="formsubmit(event)">
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name"><br>
@@ -99,6 +120,9 @@
                     <input type="email" id="email" name="email"><br>
                     <Button class="btn"type="submit" >Submit</Button>
                     </form>
+                    <div id="message">
+
+                    </div>
 
         </div>
         </div>

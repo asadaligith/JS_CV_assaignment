@@ -1,38 +1,67 @@
 
-var is_shown = false;
+// Picture Toggle
 
-function showpic(){
-     pic = document.getElementById("picture");
+function showpic(id){
+     pic = document.getElementById(id);
+     pic_btn = document.getElementById("pic-btn");
 
-     if (is_shown == false){
-        pic.innerHTML = '<img src="images/profile-pic.jpeg" alt="profile-pic" srcset="" height="300" width="300">';
-        is_shown = true;
+     if (pic.style.display === "none"){
+         pic.style.display = "block";
+         pic_btn.innerText = "Hide Picture";
+         
      }
-     else{
-        pic.innerHTML = '';
-        is_shown = false;
-     }     
+     else {
+         pic.style.display = "none";
+         pic_btn.innerText = "Show Picture";  
+       }   
 }
 
+// Education Section Toggle
+function education(id){
+    edu = document.getElementById(id);
+    edu_btn = document.getElementById("edu-btn");
 
+    if (edu.style.display === "none"){
+        edu.style.display = "block";
+        edu_btn.innerText = "Hide Education";
+    }
+      else {
+         edu.style.display = "none";
+         edu_btn.innerText = "See Education";  
+       }
+}
 
-
+// Form Validation
 function formsubmit(event){
    let name = document.getElementById("name").value;
    let email = document.getElementById("email").value;
-
-   event.preventDefault(); // Prevent form submission
+   let message = document.getElementById("message");
 
    if(name ==="" && email ===""){
-      alert("Please fill in both fields Name and Email.");
+      event.preventDefault();
+      message.textContent = "Please Enter Your Name and Email.";
+      message.style.color = "red";
    }
    else if(name ===""){
-      alert("Please enter your Name.");
+      event.preventDefault();
+      message.textContent = "Please enter your Name.";
+      message.style.color = "red";
    }
    else if(email ===""){
-      alert("Please enter your Email.");
-   
-    } else {
+      event.preventDefault();
+      message.textContent = "Please enter your Email.";
+      message.style.color = "red";
+   }
+   else {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+         event.preventDefault();
+         message.textContent = "Please enter a valid email address";
+         message.style.color = "red";
+         return;
+      }
       alert("Thank you " + name + "! We have received your email: " + email);
    }
 }
+
+// complete ...................................................
